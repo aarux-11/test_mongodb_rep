@@ -31,4 +31,4 @@ st.table(data)
 
 if st.button("Upload to MongoDB"):
     with st.spinner('Please Wait for it...'):
-        collection_name.insert_many(data.to_dict())
+        collection_name.insert_many(data.to_dict('records'))
