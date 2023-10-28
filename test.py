@@ -7,16 +7,14 @@ import pandas as pd
 client = pymongo.MongoClient("mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
 db = client.youtube_data
 
-data_new = []
-
 st.write("Here's our first attempt at using data to create a table:")
 data = pd.DataFrame({
     'first column': [1, 2, 3, 4],
     'second column': [10, 20, 30, 40]
 })
 
-data = data_new.append(data)
 st.table(data)
+data = pd.DataFrame(data)
 
 if st.button("Upload to MongoDB"):
     with st.spinner('Please Wait for it...'):
