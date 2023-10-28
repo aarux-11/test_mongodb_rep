@@ -23,7 +23,7 @@ collection_name = dbname["channel_details"]
 
 st.write("Here's our first attempt at using data to create a table:")
 
-data = [["Channel_Name", "Example Channel"],["Channel_Id", "UC1234567890",]]
+data = [["Channel_Name", "Test from test repo"],["Channel_Id", "UC1234567890",]]
 
 data = pd.DataFrame(data, columns=['Channel','Details'])
 
