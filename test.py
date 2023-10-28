@@ -11,7 +11,7 @@ from pymongo import MongoClient
 
 def get_database():
     CONNECTION_STRING = "mongodb+srv://youtubeproject.nrit3zy.mongodb.net/"
-    client = MongoClient(CONNECTION_STRING, tlsCAFile=certifi.where(), tlsAllowInvalidCertificates=True)
+    client = MongoClient(CONNECTION_STRING, tlsAllowInvalidCertificates=True)
     
     return client['YT_DataFetch']
 
