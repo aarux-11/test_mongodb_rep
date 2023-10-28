@@ -10,7 +10,7 @@ import pandas as pd
 from pymongo import MongoClient
 
 def get_database():
-    CONNECTION_STRING = "mongosh "mongodb+srv://youtubeproject.nrit3zy.mongodb.net/" --apiVersion 1 --username Aarushi"
+    CONNECTION_STRING = "mongodb+srv://youtubeproject.nrit3zy.mongodb.net/"
     client = MongoClient(CONNECTION_STRING, tlsCAFile=certifi.where(), tlsAllowInvalidCertificates=True)
     
     return client['YT_DataFetch']
