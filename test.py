@@ -17,5 +17,6 @@ st.table(data)
 
 if st.button("Upload to MongoDB"):
   with st.spinner('Please Wait for it...'):
+      data_new = data.bool()
     collections1 = db.YT_DataFetch
-    collections1.insert_many(data)
+    collections1.insert_many(data_new)
