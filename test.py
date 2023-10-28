@@ -13,8 +13,8 @@ data = pd.DataFrame({
     'second column': [10, 20, 30, 40]
 })
 
-# st.table(data)
-# st.button("Upload to MongoDB")
+st.table(data)
+st.button("Upload to MongoDB")
 
 # if st.button("Upload to MongoDB"):
 #   with st.spinner('Please Wait for it...'):
