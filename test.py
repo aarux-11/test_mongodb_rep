@@ -22,15 +22,13 @@ dbname = get_database()
 collection_name = dbname["channel_details"]
 
 st.write("Here's our first attempt at using data to create a table:")
-first_column = [1, 2, 3, 4]
-second_column = [10, 20, 30, 40]
 
-data = pd.DataFrame()
-data.append(list('first_column','second_column'))
+data = [['tom', 10], ['nick', 15], ['juli', 14]] 
+
+data = pd.DataFrame(data, columns=['first_column','second_column'])
 
 st.table(data)
-data_dict = data.to_dict()
 
 if st.button("Upload to MongoDB"):
     with st.spinner('Please Wait for it...'):
-        collection_name.insert_many(data_dict)
+        collection_name.insert_many()
