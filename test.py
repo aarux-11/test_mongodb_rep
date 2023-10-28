@@ -7,8 +7,20 @@ import pandas as pd
 # client = pymongo.MongoClient("mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
 # db = client.YT_DataFetch
 
-client = MongoClient("mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
-return client['YT_DataFetch']
+from pymongo import MongoClient
+
+def get_database():
+    CONNECTION_STRING = "mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority"
+    client = MongoClient(CONNECTION_STRING)
+    
+    return client['YT_DataFetch']
+
+if __name__ == "__main__":
+    dbname = get_database()
+
+from pymongo_get_database import get_database
+dbname = get_database()
+collection_name = dbname["channel_details"]
 
 st.write("Here's our first attempt at using data to create a table:")
 data = pd.DataFrame({
@@ -20,5 +32,4 @@ st.table(data)
 
 if st.button("Upload to MongoDB"):
     with st.spinner('Please Wait for it...'):
-        collections1 = db.data_details
-        collections1.insert_many(data)
+        collection_name.insert_many(data)
