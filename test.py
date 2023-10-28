@@ -5,7 +5,7 @@ import pandas as pd
 
 #Bridging a connection with MongoDB Atlas and Creating a new database(youtube_data)
 client = pymongo.MongoClient("mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
-return client['YT_DataFetch']
+db = client.YT_DataFetch
 
 st.write("Here's our first attempt at using data to create a table:")
 data = pd.DataFrame({
