@@ -18,5 +18,6 @@ st.table(data)
 if st.button("Upload to MongoDB"):
   with st.spinner('Please Wait for it...'):
       data_new = []
-    collections1 = db.data_details
-    collections1.insert_many(data_new.append(data))
+      
+      collections1 = db.data_details
+      collections1.insert_many(data_new.append(data))
