@@ -16,9 +16,9 @@ data = pd.DataFrame({
 st.table(data)
 st.button("Upload to MongoDB")
 
-# if st.button("Upload to MongoDB"):
-#   with st.spinner('Please Wait for it...'):
-#     ch_details = data
+if st.button("Upload to MongoDB"):
+  with st.spinner('Please Wait for it...'):
+    ch_details = data
     
-#     collections1 = db.data_details
-#     collections1.insert_many(data)
+    collections1 = db.data_details
+    collections1.insert_many(data)
