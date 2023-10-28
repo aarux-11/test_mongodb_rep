@@ -18,7 +18,6 @@ st.button("Upload to MongoDB")
 
 if st.button("Upload to MongoDB"):
   with st.spinner('Please Wait for it...'):
-    ch_details = data
-    
-    collections1 = db.data_details
-    collections1.insert_many(data)
+    data_new=data
+    collections1 = db.YT_DataFetch
+    collections1.insert_many(data_new)
