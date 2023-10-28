@@ -14,7 +14,6 @@ data = pd.DataFrame({
 })
 
 st.table(data)
-st.button("Upload to MongoDB")
 
 if st.button("Upload to MongoDB"):
   with st.spinner('Please Wait for it...'):
