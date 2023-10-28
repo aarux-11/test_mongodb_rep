@@ -18,4 +18,4 @@ st.table(data)
 if st.button("Upload to MongoDB"):
     with st.spinner('Please Wait for it...'):
         collections1 = db.data_details
-        collections1.insert_many(pd.DataFrame(data, columns=list('first_column','second_column')))
+        collections1.insert_many(pd.DataFrame(data, columns=list('first_column')))
