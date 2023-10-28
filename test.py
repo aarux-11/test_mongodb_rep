@@ -28,7 +28,7 @@ data = pd.DataFrame({
 })
 
 st.table(data)
-data_dict = data.to_dict("first_column")
+data_dict = data.to_dict()
 
 if st.button("Upload to MongoDB"):
     with st.spinner('Please Wait for it...'):
