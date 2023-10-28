@@ -14,12 +14,11 @@ data = pd.DataFrame({
     'first column': [1, 2, 3, 4],
     'second column': [10, 20, 30, 40]
 })
-dataf = data_new.append(data)
+
+data = data_new.append(data)
 st.table(data)
 
 if st.button("Upload to MongoDB"):
-  with st.spinner('Please Wait for it...'):
-      
-      
-      collections1 = db.data_details
-      collections1.insert_many(dataf)
+    with st.spinner('Please Wait for it...'):
+        collections1 = db.data_details
+        collections1.insert_many(data)
